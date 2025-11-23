@@ -1,0 +1,40 @@
+ .item-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+        }
+        .status-found {
+            background-color: #10B981;
+            color: white;
+        }
+        .status-lost {
+            background-color: #EF4444;
+            color: white;
+        }
+        .status-claimed {
+            background-color: #6B7280;
+            color: white;
+        }
+        .comment-box {
+            transition: all 0.3s ease;
+        }
+        .comment-reply {
+            margin-left: 2.5rem;
+        }
+        .like-btn.active {
+            color: #4F46E5;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .main-image {
+            grid-column: 1 / -1;
+        }
+        @media (min-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }

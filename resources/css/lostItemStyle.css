@@ -1,0 +1,41 @@
+   .item-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+        }
+        .status-found {
+            background-color: #10B981;
+            color: white;
+        }
+        .status-lost {
+            background-color: #EF4444;
+            color: white;
+        }
+        .status-claimed {
+            background-color: #6B7280;
+            color: white;
+        }
+        .filter-section {
+            transition: all 0.3s ease;
+        }
+        .filter-toggle {
+            cursor: pointer;
+        }
+        .filter-options {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .filter-options.active {
+            max-height: 500px;
+        }
+        .urgency-high {
+            border-left: 4px solid #EF4444;
+        }
+        .urgency-medium {
+            border-left: 4px solid #F59E0B;
+        }
+        .urgency-low {
+            border-left: 4px solid #10B981;
+        }

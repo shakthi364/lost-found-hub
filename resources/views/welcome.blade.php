@@ -38,8 +38,7 @@
             </div>
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-primary transition">Help & Support</a>
-                <a href="#" class="hover:text-primary transition">Report Found Item</a>
-                <a href="{{route('registration')}}" class="hover:text-primary transition">Login</a>
+                <a href="{{route('lostItem')}}#{{route('registration')}}" class="hover:text-primary transition">Login</a>
                 <a href="{{route('registration')}}" class="hover:text-primary transition">Register</a>
             </div>
         </div>
@@ -86,9 +85,9 @@
 
                 <!-- report item button and user menu -->
                 <div class="flex items-center space-x-4">
-                    <button class="hidden md:flex bg-primary hover:bg:secondary text-white px-4 py-2 rounded-lg font-bold transition duration-300 items-center">
+                    <a href="{{route('reportItem')}}" class="hidden md:flex bg-primary hover:bg:secondary text-white px-4 py-2 rounded-lg font-bold transition duration-300 items-center cursor-pointer">
                         <i class="fas fa-plus-circle mr-2"></i> Report Item
-                    </button>
+                    </a>
                     <div class="hidden md:flex items-center space-x-3">
                         <div class="relative">
                             <i class="far fa-bell text-xl text-gray-600 hover:text-primary cursor-pointer"></i>
@@ -157,7 +156,7 @@
     </nav>
 
     <!-- mobile menu -->
-     <div id="mobileMenu" class="mobile-menu">
+    <div id="mobileMenu" class="mobile-menu">
         <div class="p-4">
             <div class="flex justify-between items-center mb-6">
                 <div class="flex items-center space-x-2">
@@ -201,20 +200,20 @@
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 
-   <!-- Hero Banner -->
+    <!-- Hero Banner -->
     <section class="bg-gradient-to-r from-primary to-accent text-white py-12">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Find Your Lost Items in Sri Lanka</h2>
             <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Lost something valuable? Found an item that doesn't belong to you? Our platform helps reunite people with their lost belongings.</p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <button class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-bold text-lg transition duration-300">
+                <a href="{{route('reportItem')}}" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-bold text-lg transition duration-300">
                     Report Lost Item
-                </button>
-                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-bold text-lg transition duration-300">
+                </a>
+                <a href="{{route('reportItem')}}" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg font-bold text-lg transition duration-300">
                     Report Found Item
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -224,7 +223,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-dark mb-2">Commonly Lost Items</h2>
             <p class="text-gray-600 text-center mb-8 md:mb-10 max-w-2xl mx-auto">Browse through categories of commonly lost items to find what you're looking for</p>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
                 <!-- Category 1 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
@@ -234,7 +233,7 @@
                     <h3 class="font-bold text-dark text-sm md:text-base">Phones</h3>
                     <p class="text-gray-500 text-xs md:text-sm mt-1">245 items</p>
                 </a>
-                
+
                 <!-- Category 2 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl md:text-2xl mx-auto mb-3 md:mb-4 category-icon transition duration-300">
@@ -243,7 +242,7 @@
                     <h3 class="font-bold text-dark text-sm md:text-base">Wallets</h3>
                     <p class="text-gray-500 text-xs md:text-sm mt-1">189 items</p>
                 </a>
-                
+
                 <!-- Category 3 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl md:text-2xl mx-auto mb-3 md:mb-4 category-icon transition duration-300">
@@ -252,7 +251,7 @@
                     <h3 class="font-bold text-dark text-sm md:text-base">Keys</h3>
                     <p class="text-gray-500 text-xs md:text-sm mt-1">156 items</p>
                 </a>
-                
+
                 <!-- Category 4 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl md:text-2xl mx-auto mb-3 md:mb-4 category-icon transition duration-300">
@@ -261,7 +260,7 @@
                     <h3 class="font-bold text-dark text-sm md:text-base">Jewelry</h3>
                     <p class="text-gray-500 text-xs md:text-sm mt-1">98 items</p>
                 </a>
-                
+
                 <!-- Category 5 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl md:text-2xl mx-auto mb-3 md:mb-4 category-icon transition duration-300">
@@ -270,7 +269,7 @@
                     <h3 class="font-bold text-dark text-sm md:text-base">Documents</h3>
                     <p class="text-gray-500 text-xs md:text-sm mt-1">134 items</p>
                 </a>
-                
+
                 <!-- Category 6 -->
                 <a href="#" class="category-card bg-light rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-md transition duration-300">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center text-white text-xl md:text-2xl mx-auto mb-3 md:mb-4 category-icon transition duration-300">
@@ -280,7 +279,7 @@
                     <p class="text-gray-500 text-xs md:text-sm mt-1">167 items</p>
                 </a>
             </div>
-            
+
             <div class="text-center mt-8 md:mt-10">
                 <button class="bg-white hover:bg-gray-100 border border-gray-300 text-dark px-6 py-3 rounded-lg font-medium transition duration-300">
                     View All Categories
@@ -294,9 +293,9 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center mb-6 md:mb-8">
                 <h2 class="text-2xl md:text-3xl font-bold text-dark">Recently Found Items</h2>
-                <a href="#" class="text-primary hover:text-secondary font-medium transition">View All</a>
+                <a href="{{route('foundItem')}}" class="text-primary hover:text-secondary font-medium transition">View All</a>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 <!-- Item 1 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
@@ -320,7 +319,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 2 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -343,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 3 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -366,7 +365,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 4 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -400,7 +399,7 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-dark">Recently Lost Items</h2>
                 <a href="#" class="text-primary hover:text-secondary font-medium transition">View All</a>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 <!-- Item 1 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
@@ -424,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 2 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -447,7 +446,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 3 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -470,7 +469,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Item 4 -->
                 <div class="item-card bg-white rounded-xl shadow-sm overflow-hidden">
                     <div class="h-40 sm:h-48 bg-gray-200 relative">
@@ -502,7 +501,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-2">Success Stories</h2>
             <p class="text-center mb-8 md:mb-10 max-w-2xl mx-auto">Read about how our platform has helped reunite people with their lost belongings</p>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Story 1 -->
                 <div class="bg-white bg-opacity-10 rounded-xl p-6">
@@ -524,7 +523,7 @@
                         <i class="fas fa-star text-yellow-300 mr-1"></i>
                     </div>
                 </div>
-                
+
                 <!-- Story 2 -->
                 <div class="bg-white bg-opacity-10 rounded-xl p-6">
                     <div class="flex items-center mb-4">
@@ -545,7 +544,7 @@
                         <i class="fas fa-star text-yellow-300 mr-1"></i>
                     </div>
                 </div>
-                
+
                 <!-- Story 3 -->
                 <div class="bg-white bg-opacity-10 rounded-xl p-6">
                     <div class="flex items-center mb-4">
@@ -616,7 +615,7 @@
                     </div>
                     <p class="text-gray-400 text-sm md:text-base">Sri Lanka's trusted platform to report and find lost items. Helping reunite people with their belongings since 2023.</p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
@@ -627,7 +626,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition text-sm md:text-base">Safety Tips</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4">Resources</h4>
                     <ul class="space-y-2">
@@ -638,7 +637,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white transition text-sm md:text-base">Help & Support</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4">Contact Us</h4>
                     <ul class="space-y-2">
@@ -668,7 +667,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p class="text-sm md:text-base">&copy; 2023 Lost & Found Hub. All rights reserved.</p>
             </div>
