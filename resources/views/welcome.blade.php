@@ -39,8 +39,8 @@
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-primary transition">Help & Support</a>
                 <a href="#" class="hover:text-primary transition">Report Found Item</a>
-                <a href="#" class="hover:text-primary transition">Login</a>
-                <a href="#" class="hover:text-primary transition">Register</a>
+                <a href="{{route('registration')}}" class="hover:text-primary transition">Login</a>
+                <a href="{{route('registration')}}" class="hover:text-primary transition">Register</a>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                 <span><i class="fas fa-map-marker-alt mr-1"></i> Sri Lanka</span>
             </div>
             <div class="flex space-x-4">
-                <a href="#" class="hover:text-primary transition">Login</a>
+                <a href="{{route('registration')}}" class="hover:text-primary transition">Login</a>
             </div>
         </div>
     </div>
