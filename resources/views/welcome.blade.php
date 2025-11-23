@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ config('app.name', 'Lost & Found Hub') }}</title>
-    
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    @vite(['resources/css/welcomStyle.css', 'resources/js/welcomScript.js'])
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,67 +26,6 @@
             },
         }
     </script>
-    <style>
-        .category-card:hover .category-icon {
-            transform: scale(1.1);
-        }
-        .item-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .item-card:hover {
-            transform: translateY(-5px);
-        }
-        .location-dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            z-index: 50;
-        }
-        .location-dropdown.active {
-            display: block;
-        }
-        .location-dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            z-index: 50;
-        }
-
-        .location-dropdown.active {
-            display: block;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 100;
-            overflow-y: auto;
-        }
-        .mobile-menu.active {
-            display: block;
-        }
-        .status-found {
-            background-color: #10B981;
-            color: white;
-        }
-        .status-lost {
-            background-color: #EF4444;
-            color: white;
-        }
-        .status-claimed {
-            background-color: #6B7280;
-            color: white;
-        }
-    </style>
 </head>
 
 <body class="bg-light">
@@ -735,38 +674,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Toggle location dropdown
-        document.getElementById('locationBtn').addEventListener('click', function() {
-            document.getElementById('locationDropdown').classList.toggle('active');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            const locationBtn = document.getElementById('locationBtn');
-            const locationDropdown = document.getElementById('locationDropdown');
-            
-            if (!locationBtn.contains(event.target) && !locationDropdown.contains(event.target)) {
-                locationDropdown.classList.remove('active');
-            }
-        });
-
-        // Mobile menu functionality
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.add('active');
-        });
-
-        document.getElementById('closeMobileMenu').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.remove('active');
-        });
-
-        // Mobile search functionality
-        document.getElementById('mobileSearchBtn').addEventListener('click', function() {
-            const mobileSearch = document.getElementById('mobileSearch');
-            mobileSearch.classList.toggle('hidden');
-        });
-    </script>
 </body>
 
 </html>
